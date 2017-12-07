@@ -11,7 +11,7 @@ class InsphotoPipeline(object):
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item), ensure_ascii=False) + '\n'
-        self.file.write(line)
+        self.file.writelines(line)
         return item
 
     def spider_closed(self, spider):
