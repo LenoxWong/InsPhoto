@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
+INSTAGRAMMER = 'ahmad_monk'
+
 BOT_NAME = 'InsPhoto'
 
 SPIDER_MODULES = ['InsPhoto.spiders']

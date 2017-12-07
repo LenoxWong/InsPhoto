@@ -5,4 +5,8 @@ import scrapy
 
 
 class InsphotoItem(scrapy.Item):
-    pass
+    url = scrapy.Field()
+    like = scrapy.Field()
+    comment = scrapy.Field()
+    date = scrapy.Field()
+    detail = scrapy.Field()

@@ -11,7 +11,7 @@ class InsPhotoDownloaderMiddleware(object):
     def process_request(cls, request, spider):
         HEADLESS_BROWSER = webdriver.PhantomJS()
         HEADLESS_BROWSER.get(request.url)
-        time.sleep(1)
+        time.sleep(3)
         body = HEADLESS_BROWSER.page_source
         HEADLESS_BROWSER.quit()
         return HtmlResponse(request.url, body=body, encoding='utf-8', request=request)
