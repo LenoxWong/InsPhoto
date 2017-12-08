@@ -14,7 +14,7 @@ class InsPhotoDownloaderMiddleware(object):
         HEADLESS_BROWSER = webdriver.PhantomJS()
         HEADLESS_BROWSER.get(request.url)
         print('____________________ downloding page')
-        time.sleep(3)
+        # time.sleep(3)
         body = HEADLESS_BROWSER.page_source
         HEADLESS_BROWSER.quit()
         print('____________________ page dowmloded ')

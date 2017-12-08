@@ -2,7 +2,7 @@
 
 
 INSTAGRAMMER = 'ahmad_monk'
-STOP_CRAWL = 24 # after this hours, spider stops
+# STOP_CRAWL = 24 # after this hours, spider stops
 
 BOT_NAME = 'InsPhoto'
 

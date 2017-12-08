@@ -125,3 +125,58 @@ class InsSpider(scrapy.Spider):
             self.__class__.is_increment = True
             print('__________ start incremental crawling __________')
             yield scrapy.Request(url=self.start_url, callback=self.parse_index, dont_filter=True)
+# ...
+# ...
+# ...
+# 2017-12-08 21:32:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22:%2222543622%22,%22first%22:100,%22after%22:%22AQAWqcYrUaowXHBS3TM3Aajj5JLPW5x_hky7__LmDKYp3nu4UPY9jh8iiKkEWkCTn1SLO2iUxjn32HnZww2YOAH7KwIDNwnOEU7QpjkgA_obvQ%22%7D>
+# {'comment': 36,
+#  'date': '2013-07-30 06:47:59',
+#  'detail': 'https://www.instagram.com/p/cXf-UtOJ3B/?taken-by=ahmad_monk',
+#  'like': 465,
+#  'url': 'https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e15/11275320_790115737773242_601775010_n.jpg'}
+# 2017-12-08 21:32:18 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22:%2222543622%22,%22first%22:100,%22after%22:%22AQAWqcYrUaowXHBS3TM3Aajj5JLPW5x_hky7__LmDKYp3nu4UPY9jh8iiKkEWkCTn1SLO2iUxjn32HnZww2YOAH7KwIDNwnOEU7QpjkgA_obvQ%22%7D>
+# {'comment': 20,
+#  'date': '2013-06-28 03:36:25',
+#  'detail': 'https://www.instagram.com/p/bEwnSROJ1L/?taken-by=ahmad_monk',
+#  'like': 397,
+#  'url':  'https://scontent-nrt1-1.cdninstagram.com/t51.2885-15/e15/11203431_427708267409977_313556750_n.jpg'}
+# ...
+# ...
+# ...
+# __________ start incremental crawling __________
+# ____________________ downloding page
+# ____________________ page dowmloded
+# 2017-12-08 21:33:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.instagram.com/ahmad_monk/> (referer: https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22:%2222543622%22,%22first%22:100,%22after%22:%22AQAWqcYrUaowXHBS3TM3Aajj5JLPW5x_hky7__LmDKYp3nu4UPY9jh8iiKkEWkCTn1SLO2iUxjn32HnZww2YOAH7KwIDNwnOEU7QpjkgA_obvQ%22%7D)
+# 2017-12-08 21:33:18 [scrapy.extensions.logstats] INFO: Crawled 6 pages (at 5 pages/min), scraped 238 items (at 238 items/min)
+# ____________________ finding new images
+# 2017-12-08 21:34:18 [scrapy.extensions.logstats] INFO: Crawled 6 pages (at 0 pages/min), scraped 238 items (at 0 items/min)
+# ____________________ downloding page
+# ____________________ page dowmloded
+# 2017-12-08 21:34:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.instagram.com/ahmad_monk/> (referer: https://www.instagram.com/ahmad_monk/)
+# ____________________ finding new images
+# 2017-12-08 21:35:31 [scrapy.extensions.logstats] INFO: Crawled 7 pages (at 1 pages/min), scraped 238 items (at 0 items/min)
+# ____________________ downloding page
+# ____________________ page dowmloded
+# ...
+# ...
+# ...
+# ^C2017-12-08 21:36:26 [scrapy.crawler] INFO: Received SIG_UNBLOCK, shutting down gracefully. Send again to force
+# ____________________ finding new images
+# 2017-12-08 21:36:40 [scrapy.core.engine] INFO: Closing spider (shutdown)
+# 2017-12-08 21:36:40 [scrapy.extensions.logstats] INFO: Crawled 8 pages (at 0 pages/min), scraped 238 items (at 0 items/min)
+# 2017-12-08 21:36:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+# {'finish_reason': 'shutdown',
+#  'finish_time': datetime.datetime(2017, 12, 8, 13, 36, 40, 305107),
+#  'item_scraped_count': 238,
+#  'log_count/DEBUG': 247,
+#  'log_count/INFO': 14,
+#  'memusage/max': 76636160,
+#  'memusage/startup': 63647744,
+#  'request_depth_max': 8,
+#  'response_received_count': 8,
+#  'scheduler/dequeued': 8,
+#  'scheduler/dequeued/memory': 8,
+#  'scheduler/enqueued': 9,
+#  'scheduler/enqueued/memory': 9,
+#  'start_time': datetime.datetime(2017, 12, 8, 13, 30, 37, 621036)}
+# 2017-12-08 21:36:40 [scrapy.core.engine] INFO: Spider closed (shutdown)
